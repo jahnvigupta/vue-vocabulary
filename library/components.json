@@ -2,6 +2,9 @@
   "utils": [
     "SlotRenderer"
   ],
+  "assets": [
+    "Logos"
+  ],
   "layouts": [
     "Tabs",
     ["Tabs", "Tab"],

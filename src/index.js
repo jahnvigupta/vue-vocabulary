@@ -7,6 +7,8 @@
 
 import SlotRenderer from './utils/SlotRenderer/SlotRenderer'
 
+import Logos from './assets/Logos/Logos'
+
 import Tabs from './layouts/Tabs/Tabs'
 import Tab from './layouts/Tabs/Tab'
 import Table from './layouts/Table/Table'
@@ -19,6 +21,8 @@ import Locale from './patterns/Locale/Locale'
 // Export individual components
 export {
   SlotRenderer,
+
+  Logos,
 
   Tabs,
   Tab,
@@ -34,6 +38,8 @@ export {
 export default {
   install: function (Vue) {
     Vue.component('SlotRenderer', SlotRenderer)
+
+    Vue.component('Logos', Logos)
 
     Vue.component('Tabs', Tabs)
     Vue.component('Tab', Tab)
