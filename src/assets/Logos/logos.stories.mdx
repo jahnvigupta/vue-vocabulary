@@ -1,20 +1,19 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
-import Logo from '@/assets/Logo/Logo'
+import { figmaConfig } from '../../utils/helpers'
+
+import Logo from '@/assets/Logos/Logos'
 
 <Meta title="Assets/Logos" />
 
-# Header
-
-## Sizes
-
-The big header version was created for static content websites where the main navigation is crucial. In that way, users
-can access and move from page to page easily. This version is not recommended for functional-oriented products like
-CC Search.
+# Logos
 
 <Preview>
-  <Story name="yoo" height="350px">{({
- components: { Logo },
-  template: `
-    <Logo fileName="cc/logomark" id="logomark" viewBoxX=304 viewBoxY=73 />`
-    })}</Story>
+  <Story name="CC Logomark" height="128px" parameters={{
+    design: figmaConfig('1%3A13')
+  }}>{{
+  components: { Logo },
+    template: `
+      <Logo fileName="cc/logomark" id="logomark" viewBoxX=304 viewBoxY=73 textColor="has-text-black"/>`
+}}</Story>
 </Preview>
+

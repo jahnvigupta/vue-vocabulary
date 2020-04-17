@@ -1,10 +1,10 @@
 <template>
-<div class="?has-text-white">
-<svg
+<div :class="textColor">
+<svg style="height: 73px;"
 xmlns="http://www.w3.org/2000/svg"
 preserveAspectRatio="xMidyMid meet"
-viewBox="0 0 304 73">
-<use></use>
+:viewBox=viewBox>
+<use :href=fileAddress></use>
 </svg></div>
 </template>
 
@@ -12,9 +12,6 @@ viewBox="0 0 304 73">
   export default {
     name: 'Logo',
     props: {
-      height: {
-        type: Number
-      },
       viewBoxX: {
         type: Number
       },
@@ -26,6 +23,17 @@ viewBox="0 0 304 73">
       },
       id: {
         type: String
+      },
+      textColor: {
+        type: String
+      }
+    },
+    computed: {
+      fileAddress () {
+        return 'logos/' + this.fileName + '.svg#' + this.id
+      },
+      viewBox () {
+        return '0 0 ' + this.viewBoxX + this.viewBoxY
       }
     }
   }
